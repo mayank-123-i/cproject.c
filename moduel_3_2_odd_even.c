@@ -1,23 +1,13 @@
 #include <stdio.h>
-#include <conio.h>
 
-int main()
-{
-  int a;
+int main() {
+    int num;
+    printf("Enter the number : ");
+    scanf("%d", &num);
 
-  printf("Enter The number : ");
-  scanf("%d",&a);
+    char* result = (num % 2 == 0) ? "even" : "odd";
 
-  if (a%2==0)
-  {
-    printf("%d is even number",a);
-  }
+    printf("%d is %s.\n", num, result);
 
-  else
-  {
-     printf("%d is odd number",a);
-  }
-  
-  
     return 0;
 }
