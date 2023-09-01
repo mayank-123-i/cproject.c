@@ -1,44 +1,51 @@
 #include <stdio.h>
+#include <conio.h>
 
 int main()
 {
     int a, b;
-
+    float result;
     char opr;
 
-    printf("Enter your choice (+, -, *, /): ");
+    printf("Choose this operator(+,-,*,/) : ");
     scanf("%c", &opr);
 
-    printf("Enter the value of a : \n");
+    printf("Enter the value of a : ");
     scanf("%d", &a);
 
-    printf("Enter the value of b : \n");
+    printf("Enter the value of b : ");
     scanf("%d", &b);
 
-        switch (opr)
+    switch (opr)
     {
     case '+':
-        printf("%d + %d = %d\n", a, b, a + b);
+        result = a + b;
         break;
+
     case '-':
-        printf("%d - %d = %d\n", a, b, a - b);
+        result = a - b;
         break;
+
     case '*':
-        printf("%d * %d = %d\n", a, b, a * b);
+        result = a * b;
         break;
+
     case '/':
         if (b == 0)
         {
-            printf("Error: division by 0\n");
+            printf("Erroe : division by 0");
         }
         else
         {
-            printf("%d / %d = %f\n", a, b, (float)a / b);
+            result = a / b;
         }
         break;
+
     default:
-        printf("Invalid choice\n");
+        printf("Invalid operator");
+        break;
     }
 
+    printf("Result is : %f", result);
     return 0;
 }
